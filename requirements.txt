@@ -1,0 +1,17 @@
+beautifulsoup4
+bs4
+chromedriver-binary==121.0.6115.2.0
+certifi
+Flask
+Flask-Cors
+gunicorn
+Jinja2
+numpy
+pandas
+Pillow
+pymongo
+selenium==4.15.2
+six
+pymongo[srv]
+
+-e .
