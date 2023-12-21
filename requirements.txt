@@ -13,5 +13,8 @@ pymongo
 selenium==4.15.2
 six
 pymongo[srv]
-
+plotly==-5.18.0
+streamlit==1.28.0
+tiktoken==0.4.0
+transformers==4.34.0
 -e .
