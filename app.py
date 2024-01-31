@@ -32,11 +32,12 @@ def form_input():
         scrapped_data = scrapper.get_review_data()
         if scrapped_data is not None:
             st.session_state["data"] = True
-            MongoIO.store_reviews(product_name=product,
+            mongoio = MongoIO()
+            mongoio.store_reviews(product_name=product,
                                   reviews=scrapped_data)
             print("Stored Data into mongodb")
 
-        return scrapped_data
+        st.dataframe(scrapped_data)
 
 
 if __name__ == "__main__":
