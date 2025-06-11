@@ -13,9 +13,6 @@ st.title("Myntra Review Scrapper")
 st.session_state["data"] = False
 
 
-
-
-
 def form_input():
     product = st.text_input("Search Products")
     st.session_state[SESSION_PRODUCT_KEY] = product

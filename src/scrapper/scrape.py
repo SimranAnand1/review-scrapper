@@ -162,7 +162,7 @@ class ScrapeReviews:
                     "Name": name,
                     "Comment": comment,
                 }
-                reviews.append(mydict)
+                reviews.append(mydict)  #  a list of all dictionary elements
 
             review_data = pd.DataFrame(
                 reviews,
@@ -195,8 +195,6 @@ class ScrapeReviews:
 
             product_urls = self.scrape_product_urls(product_name=self.product_name)
 
-            
-
             product_details = []
 
             review_len = 0
@@ -220,10 +218,10 @@ class ScrapeReviews:
             
             data.to_csv("data.csv", index=False)
             
-            return data
-            
-            
+            return data   # For running Streamlit app, you can return the data as dataframe directly
                 
+            # For running Flask app, you can return the columns and values separately. Uncomment the following lines:
+
             # columns = data.columns
 
             # values = [[data.loc[i, col] for col in data.columns ] for i in range(len(data)) ]
